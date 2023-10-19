@@ -18,7 +18,7 @@ The toolkit is designed for users who need to preprocess images and perform spec
 ## Installation
 
 ```bash
-git clone https://github.com/your-repo.git
+git clone https://github.com/hhpadma/ImageSpectraPy.git
 cd your-repo
 pip install -r requirements.txt
 ```
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 Clone the Repository:
 
-Clone this repository to your local machine using git clone https://github.com/your_username/ImageSpectraPy.git.
+Clone this repository to your local machine using git clone https://github.com/hhpadma/ImageSpectraPy.git.
 Navigate to the cloned repository by running cd ImageSpectraPy.
 Set Up the Python Environment:
 
