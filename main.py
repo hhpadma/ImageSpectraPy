@@ -9,6 +9,11 @@ from src.preprocessor import prepare_image, remove_noise
 input_folder = "./input"
 output_folder = "./output"
 
+target_size = 512
+# Less formal "censoring approach" from Renshaw et al. 1983
+threshold = 4/(target_size**2)
+image_length = 1.0  # mm
+
 # Check if output folder exists, if not create it
 if not os.path.exists(output_folder):
     os.mkdir(output_folder)
@@ -22,10 +27,10 @@ for file_name in os.listdir(input_folder):
         # Loading in grayscale
         img = cv2.imread(img_path, cv2.IMREAD_GRAYSCALE)
         img_denoised = remove_noise(img)
-        img = prepare_image(img, 512)
+        img = prepare_image(img, target_size)
 
         # Instantiate analyzer and visualizer
-        analyzer = ImageAnalyzer(img, image_length=1.0, threshold=0.05)
+        analyzer = ImageAnalyzer(img, image_length, threshold)
         visualizer = ImageAnalyzerVisualizer(analyzer, file_name.split('.')[0])
 
         # Visualize and save the results
