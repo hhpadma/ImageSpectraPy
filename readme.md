@@ -5,11 +5,11 @@ ImageSpectraPy is a Python toolkit that performs the following functions:
 
 Image Preprocessing:
 
-Removes noise from images.
-Converts images to grayscale.
-Resizes images to standard dimensions.
-Spectral Analysis:
+  Removes noise from images.
+  Converts images to grayscale.
+  Resizes images to standard dimensions.
 
+Spectral Analysis:
 Uses Fast Fourier Transforms (FFT) to transition images into the frequency domain.
 Calculates periodograms to visualize the frequency components of images.
 Computes radial and angular spectra of images.
